@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>МАГАЗИН</title>
+	<link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+	<!--<script src="js/country.js"></script> -->
+</head>
+
+<body id="telo">
+
+	<div id="header">
+		<div id="logo"></div>
+		<div id="org"></div>
+		<div id="contact">
+			<span class="telText">Телефон:</span> <span class="telNum"> +7 (999) 123-45-67</span><br>
+			<span class="adr">Адрес: г. Кропоткин, ул. Красная, 24<br>
+			Часы работы: 8:00 - 20:00</span>
+		</div>
+	</div>
+	
+	<div id="navFon"></div>
+	
+	<div id="navmenu">
+		<ol>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="zakaz.html">Оформление заказа</a></li>
+		</ol>
+	</div>
+	<div id="content">
+	<div id="cart_content">
+	<h1 class="korz_title">Ваша корзина</h1>
+	</div>
+		 
+	<script type="text/javascript">
+	    var StrT = ReadStor();
+		document.getElementById("cart_content").innerHTML += StrT;
+	</script>
+		<div id="wrapperZvonok">
+			
+			<span id="zvonokText">Заполните форму и с Вами свяжется наш специалист</span>
+			
+			<form  name="zForm" id="zvonokForm" method="POST">
+				<span>ФИО<em>*</em></span><br>
+				<input id="zvonokFormText" type="text" name="name" placeholder="" onblur="nameForm = this.value;"><br>
+				<span>Адрес<em>*</em></span><br>
+				<input id="zvonokFormText" type="text" name="adr" placeholder="Ваш адрес" onblur="adrForm = this.value;"><br>
+				<span>E-mail</span><br>
+				<input id="zvonokFormEmail" type="email" name="email" placeholder="E-mail" onblur="emailForm = this.value;"><br>
+				<span>Телефон<em>*</em></span><br>
+				<input id="zvonokFormTel" type="tel" name="tel" placeholder="+7..." onblur="telForm = this.value;"><br>
+				<input id="otprBut1" class="otpr" type="button" value="ЗАКАЗАТЬ ЗВОНОК" onclick="proverkaFormi();">
+				
+			</form>
+			
+		</div>
+			
+	</div>
+	<footer>
+
+	<div id="wrapperCopirayt">
+		<div>© 2020. Разработчик - Студент </div>
+	</div>
+
+</footer>
+
+</body>
+
+</html>
